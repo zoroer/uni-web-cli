@@ -29,5 +29,8 @@
     "fs-extra": "^11.2.0",
     "ora": "^5.4.1",
     "prompts": "^2.4.2"
+  },
+  "bin": {
+    "uni-web-cli": "index.js"
   }
 }

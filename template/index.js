@@ -4,7 +4,7 @@ const h5Template = {
   value: 'h5',
   title: 'h5项目',
   description: 'h5项目模板',
-  repositoryUrl: 'https://github.com/zoroer/uni-web-templates.git',
+  repositoryUrl: 'https://github.com/zoroer/Yourpan-fe.git',
   choseAction
 }
 

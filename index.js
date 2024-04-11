@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // native
 const { join } = require('node:path')
 
@@ -16,6 +18,7 @@ program
   .name(name)
   .description(description)
   .version(version)
+  .showHelpAfterError('(add --help for additional information)')
 
 program
   .command('init')
@@ -35,9 +38,13 @@ program
     const { dest } = await prompts({
       type: 'text',
       name: 'dest',
-      message: '请输入项目名称'
+      message: '请输入项目名称',
+      validate: text => text.trim() ? true : '项目名不能为空!'
     })
-    choseAction(dest, repositoryUrl)
+
+    if (dest?.trim()) {
+      choseAction(dest, repositoryUrl)
+    }
   })
 
 program.parse()
