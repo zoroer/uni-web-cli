@@ -87,6 +87,11 @@ const doneTipsLog = (dest) => {
  * @param gitUrl git仓库地址
  */
 const choseAction = async (dest, gitUrl) => {
+  if (!gitUrl) {
+    console.log('当前选择类型仓库暂未支持，敬请期待~')
+    return false
+  }
+
   try {
     const projectFullPath = await validDest(dest)
     await cloneFromGit(projectFullPath, gitUrl)

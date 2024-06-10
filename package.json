@@ -1,5 +1,5 @@
 {
-  "name": "uni-web-cli",
+  "name": "@uni-web-lab/uni-web-cli",
   "version": "0.0.1",
   "description": "一个web相关各个方向项目模板的脚手架。脚手架支持多种项目模板：h5项目，admin管理后台项目，node-web项目，小程序项目。",
   "main": "index.js",
@@ -15,6 +15,9 @@
     "template",
     "web"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "zoroer",
   "license": "MIT",
   "bugs": {
